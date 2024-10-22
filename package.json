@@ -6,7 +6,11 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "delete:docs": "del docs",
+    "copy:dist": "copyfiles dist/words-game/* && copyfiles dist/words-game/browser/* ./docs -f",
+    "build:github": "npm run delete:docs && npm run build:href && npm run copy:dist",
+    "build:href": "ng build --base-href ./"
   },
   "private": true,
   "dependencies": {
