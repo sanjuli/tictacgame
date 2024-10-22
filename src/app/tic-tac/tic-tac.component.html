@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic-Tac</title>
+  </head>
+  <body>
+    <div class="game">
+      <h1>Tic Tac Toe</h1>
+      <div class="board">
+        <div
+          *ngFor="let cell of cells; let i = index"
+          class="cell"
+          (click)="makeMove(i)"
+        >
+          {{ cell }}
+        </div>
+      </div>
+      <button (click)="resetGame()">Reiniciar Juego</button>
+      <div *ngIf="winner">
+        <h2>{{ winner }} ha ganado!</h2>
+      </div>
+    </div>
+  </body>
+</html>
