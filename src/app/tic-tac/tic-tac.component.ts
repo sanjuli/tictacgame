@@ -12,14 +12,12 @@ export class TicTacComponent {
   cells: string[] = Array(9).fill(null);
   xIsNext: boolean = true;
   winner: string | null = null;
-  tablas: string | null = null;
 
   makeMove(index: number) {
     if (!this.cells[index] && !this.winner) {
       this.cells[index] = this.xIsNext ? 'X' : 'O';
       this.xIsNext = !this.xIsNext;
       this.winner = this.calculateWinner();
-      this.tablas = this.tablasMatch();
     }
   }
 
@@ -56,11 +54,5 @@ export class TicTacComponent {
     this.cells.fill('');
     this.winner = null;
     this.xIsNext = true;
-    this.tablas = null;
-
-    console.log('Juego reiniciado');
-    console.log('Celdas:', this.cells);
-    console.log('Ganador:', this.winner);
-    console.log(this.tablas);
   }
 }
