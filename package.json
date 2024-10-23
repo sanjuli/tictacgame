@@ -4,13 +4,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "delete:docs": "del docs",
-    "copy:dist": "copyfiles dist/tictac-game/* && copyfiles dist/tictac-game/browser/* ./docs -f",
-    "build:github": "npm run delete:docs && npm run build:href && npm run copy:dist",
-    "build:href": "ng build --base-href ./"
+    "build": "ng build",
+    "deploy": "npx angular-cli-ghpages --dir=dist/browser"
+
   },
   "private": true,
   "dependencies": {
