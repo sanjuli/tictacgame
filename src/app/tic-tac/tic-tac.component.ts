@@ -57,5 +57,6 @@ export class TicTacComponent {
     this.cells.fill('');
     this.winner = null;
     this.xIsNext = true;
+    this.tablas = null;
   }
 }
