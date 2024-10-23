@@ -44,7 +44,10 @@ export class TicTacComponent {
     return null;
   }
   tablasMatch(): string | null {
-    if (this.cells.every((cell) => cell !== null) && !this.winner) {
+    const allCellsFilled = this.cells.every((cell) => cell !== null);
+    console.log(allCellsFilled);
+    console.log(this.winner);
+    if (allCellsFilled && !this.winner) {
       return 'Partida Tablas';
     }
     return null;
