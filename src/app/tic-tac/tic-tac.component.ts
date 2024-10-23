@@ -12,6 +12,7 @@ export class TicTacComponent {
   cells: string[] = Array(9).fill(null);
   xIsNext: boolean = true;
   winner: string | null = null;
+  tabla: string | null = 'Partida Tablas';
 
   makeMove(index: number) {
     if (!this.cells[index] && !this.winner) {
@@ -48,7 +49,7 @@ export class TicTacComponent {
     console.log(allCellsFilled);
     console.log(this.winner);
     if (allCellsFilled && !this.winner) {
-      return 'Partida Tablas';
+      return this.tabla;
     }
     return null;
   }
@@ -57,5 +58,6 @@ export class TicTacComponent {
     this.cells.fill('');
     this.winner = null;
     this.xIsNext = true;
+    this.tabla = null;
   }
 }
