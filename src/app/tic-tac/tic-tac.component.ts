@@ -46,7 +46,7 @@ export class TicTacComponent {
     return null;
   }
   tablasMatch(): string | null {
-    if (this.cells.length == 9) {
+    if (this.cells.every((cell) => cell != null) && !this.winner) {
       return 'Partida Tablas';
     }
     return null;
