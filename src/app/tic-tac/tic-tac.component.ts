@@ -32,7 +32,7 @@ export class TicTacComponent {
       [1, 4, 7],
       [2, 5, 8], // vertical
       [0, 4, 8],
-      [2, 4, 6], // diagonal
+      [2, 4, 6], // diagonalPbit
     ];
     for (const [a, b, c] of lines) {
       if (
