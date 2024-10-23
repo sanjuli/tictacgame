@@ -20,7 +20,6 @@ export class TicTacComponent {
       this.xIsNext = !this.xIsNext;
       this.winner = this.calculateWinner();
       this.tablas = this.tablasMatch();
-      console.log('Mensaje de tablas: ', this.tablas);
     }
   }
 
@@ -58,5 +57,10 @@ export class TicTacComponent {
     this.winner = null;
     this.xIsNext = true;
     this.tablas = null;
+
+    console.log('Juego reiniciado');
+    console.log('Celdas:', this.cells);
+    console.log('Ganador:', this.winner);
+    console.log(this.tablas);
   }
 }
