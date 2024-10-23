@@ -20,6 +20,7 @@ export class TicTacComponent {
       this.xIsNext = !this.xIsNext;
       this.winner = this.calculateWinner();
       this.tablas = this.tablasMatch();
+      console.log('Mensaje de tablas: ', this.tablas);
     }
   }
 
@@ -46,7 +47,7 @@ export class TicTacComponent {
     return null;
   }
   tablasMatch(): string | null {
-    if (this.cells.every((cell) => cell != null) && !this.winner) {
+    if (this.cells.every((cell) => cell !== null) && !this.winner) {
       return 'Partida Tablas';
     }
     return null;
