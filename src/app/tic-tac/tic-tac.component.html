@@ -18,11 +18,11 @@
           {{ cell }}
         </div>
       </div>
-      <button (click)="resetGame()" class="btn btn-primary">
+      <button class="btn btn-secondary" (click)="resetGame()">
         Reiniciar Juego
       </button>
       <div *ngIf="winner">
-        <h2>{{ winner }} ha ganado!</h2>
+        <h2 style="color: aquamarine">{{ winner }} ha ganado!</h2>
       </div>
     </div>
   </body>
