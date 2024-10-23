@@ -12,12 +12,14 @@ export class TicTacComponent {
   cells: string[] = Array(9).fill(null);
   xIsNext: boolean = true;
   winner: string | null = null;
+  tablas: string | null = null;
 
   makeMove(index: number) {
     if (!this.cells[index] && !this.winner) {
       this.cells[index] = this.xIsNext ? 'X' : 'O';
       this.xIsNext = !this.xIsNext;
       this.winner = this.calculateWinner();
+      this.tablas = this.tablasMatch();
     }
   }
 
@@ -40,6 +42,12 @@ export class TicTacComponent {
       ) {
         return this.cells[a];
       }
+    }
+    return null;
+  }
+  tablasMatch(): string | null {
+    if (this.cells.length == 9) {
+      return 'Partida Tablas';
     }
     return null;
   }

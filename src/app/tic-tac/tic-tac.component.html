@@ -24,6 +24,9 @@
       <div *ngIf="winner">
         <h2 style="color: aquamarine">{{ winner }} ha ganado!</h2>
       </div>
+      <div *ngIf="tablasMatch()">
+        <h2 style="color: black">{{ tablasMatch() }}</h2>
+      </div>
     </div>
   </body>
 </html>
