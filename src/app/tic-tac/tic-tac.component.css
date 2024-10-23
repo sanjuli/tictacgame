@@ -1,7 +1,6 @@
 .game {
   text-align: center;
   margin-top: 20px;
-  border: 1px solid black;
 }
 
 .board {
@@ -9,7 +8,6 @@
   grid-template-columns: repeat(3, 100px);
   gap: 5px;
   margin: 10px auto;
-  border: 1px solid black;
   width: 312px;
 }
 
