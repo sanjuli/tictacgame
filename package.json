@@ -6,8 +6,8 @@
     "start": "ng serve",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "build": "ng build",
-    "deploy": "npx angular-cli-ghpages --dir=dist/browser"
+    "build": "ng build --configuration-production --base-href='/tictacgame/",
+    "deploy": "npx angular-cli-ghpages --dir=dist/browser --repo='https://github.com/sanjuli/tictacgame.git'"
 
   },
   "private": true,
